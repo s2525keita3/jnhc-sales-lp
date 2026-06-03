@@ -1346,3 +1346,59 @@ a{ color:var(--brand); text-decoration:none; }
   font-weight:500;
   margin:16px 0 0;
 }
+
+
+/* ===== LINE 公式アカウント CTA セクション ===== */
+.line-section{
+  padding:72px 20px 80px;
+  background:linear-gradient(155deg,#0a2540 0%,#1e3a5f 100%);
+  text-align:center;
+}
+.line-section__inner{
+  max-width:560px;
+  margin:0 auto;
+}
+.line-section__badge{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:80px;height:80px;
+  background:#06C755;
+  border-radius:24px;
+  margin-bottom:28px;
+  box-shadow:0 8px 28px rgba(6,199,85,.5);
+}
+.line-section__badge span{
+  color:#fff;
+  font-size:20px;
+  font-weight:900;
+  letter-spacing:.06em;
+  line-height:1;
+}
+.line-section__title{
+  color:#fff;
+  font-size:clamp(20px,4vw,28px);
+  font-weight:900;
+  line-height:1.55;
+  margin-bottom:18px;
+  letter-spacing:.01em;
+}
+.line-section__title em{
+  color:#4ade80;
+  font-style:normal;
+}
+.line-section__text{
+  color:rgba(255,255,255,.82);
+  font-size:clamp(14px,2.5vw,16px);
+  line-height:1.85;
+  margin-bottom:36px;
+}
+.line-section__note{
+  margin-top:18px;
+  font-size:13px;
+  color:rgba(255,255,255,.5);
+  line-height:1.6;
+}
+.line-section .cta-btn--line{
+  font-size:clamp(16px,3.4vw,22px);
+}
