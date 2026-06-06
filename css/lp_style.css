@@ -1402,3 +1402,35 @@ a{ color:var(--brand); text-decoration:none; }
 .line-section .cta-btn--line{
   font-size:clamp(16px,3.4vw,22px);
 }
+
+/* ===== 課題リスト（大文字強調） ===== */
+.worry-list{
+  list-style:none;
+  margin:28px 0 0;
+  padding:0;
+  text-align:left;
+}
+.worry-list li{
+  font-size:clamp(18px,4.8vw,26px);
+  font-weight:900;
+  color:#0F172A;
+  line-height:1.45;
+  padding:16px 0 16px 20px;
+  border-bottom:2px solid #BFDBFE;
+  position:relative;
+  letter-spacing:.01em;
+}
+.worry-list li:first-child{
+  border-top:2px solid #BFDBFE;
+}
+.worry-list li::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:50%;
+  transform:translateY(-50%);
+  width:6px;
+  height:60%;
+  background:#DC2626;
+  border-radius:3px;
+}
