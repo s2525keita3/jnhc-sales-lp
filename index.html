@@ -373,5 +373,63 @@
  <div class="site-footer__copy">Copyright (c) 2026 JNHC-MRA / John.Inc All rights reserved.</div>
 </footer>
 
+<!-- ===== GA4 CTAクリック・フォーム送信トラッキング ===== -->
+<script>
+(function(){
+  function ctaLabel(el){
+    if(el.closest('.site-header'))  return 'ヘッダー';
+    if(el.closest('.fv'))           return 'ファーストビュー';
+    if(el.classList.contains('form-submit-btn')) return 'フォーム送信ボタン';
+    var inline = el.closest('.cta-inline');
+    if(inline){
+      var prev = inline.previousElementSibling;
+      var labels = {why:'設計型営業_下', deliverables:'テンプレート_下', roi:'ROI_下'};
+      return prev && prev.id ? (labels[prev.id] || prev.id + '_下') : 'インラインCTA';
+    }
+    var sec = el.closest('section');
+    return sec && sec.id ? sec.id : 'その他';
+  }
+
+  // CTAボタン・ヘッダーボタン クリック
+  document.querySelectorAll('.cta-btn, .site-header__cta').forEach(function(el){
+    el.addEventListener('click', function(){
+      if(typeof gtag !== 'function') return;
+      gtag('event', 'cta_click', {
+        event_category: 'CTA',
+        event_label: ctaLabel(el),
+        page_location: location.href
+      });
+    });
+  });
+
+  // フォーム送信
+  var form = document.querySelector('.consult-form');
+  if(form){
+    form.addEventListener('submit', function(){
+      if(typeof gtag !== 'function') return;
+      gtag('event', 'form_submit', {
+        event_category: 'Form',
+        event_label: '無料個別相談フォーム'
+      });
+    });
+  }
+
+  // フォームセクション表示（Intersection Observer）
+  var formSec = document.getElementById('form');
+  if(formSec && 'IntersectionObserver' in window){
+    var observed = false;
+    new IntersectionObserver(function(entries, obs){
+      if(!observed && entries[0].isIntersecting){
+        observed = true;
+        if(typeof gtag === 'function'){
+          gtag('event', 'form_view', {event_category: 'Form', event_label: 'フォームセクション到達'});
+        }
+        obs.disconnect();
+      }
+    }, {threshold: 0.3}).observe(formSec);
+  }
+})();
+</script>
+
 </body>
 </html>
