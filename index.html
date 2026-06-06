@@ -48,7 +48,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700;900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" type="text/css" href="css/reset.css">
-  <link rel="stylesheet" type="text/css" href="css/lp_style.css?v=9">
+  <link rel="stylesheet" type="text/css" href="css/lp_style.css?v=10">
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EJY6S44N0V"></script>
   <script>
@@ -117,7 +117,7 @@
    <img src="img/s01.webp" alt="営業力強化 3ヶ月伴走プログラム" loading="eager">
   </div>
   <div class="fv__cta">
-   <a href="https://liff.line.me/1654945145-hHBq9Hq0?liff_id=1654945145-hHBq9Hq0&code=LFFGAHST" target="_blank" rel="noopener" class="cta-btn cta-btn--line">LINE で無料個別相談を申し込む</a>
+   <a href="#form" class="cta-btn cta-btn--line">無料個別相談を申し込む</a>
   </div>
  </section>
 
@@ -163,7 +163,7 @@
  </section>
 
  <div class="cta-inline cta-inline--soft">
-  <a href="https://liff.line.me/1654945145-hHBq9Hq0?liff_id=1654945145-hHBq9Hq0&code=LFFGAHST" target="_blank" rel="noopener" class="cta-btn cta-btn--line">LINE で無料個別相談を申し込む</a>
+  <a href="#form" class="cta-btn cta-btn--line">無料個別相談を申し込む</a>
  </div>
 
  <section id="program" class="lp-section" aria-labelledby="program-title">
@@ -209,7 +209,7 @@
  </section>
 
  <div class="cta-inline cta-inline--soft">
-  <a href="https://liff.line.me/1654945145-hHBq9Hq0?liff_id=1654945145-hHBq9Hq0&code=LFFGAHST" target="_blank" rel="noopener" class="cta-btn cta-btn--line">LINE で無料個別相談を申し込む</a>
+  <a href="#form" class="cta-btn cta-btn--line">無料個別相談を申し込む</a>
  </div>
 
  <section id="beforeafter" class="lp-section lp-section--soft" aria-labelledby="ba-title">
@@ -262,7 +262,7 @@
  </section>
 
  <div class="cta-inline cta-inline--soft">
-  <a href="https://liff.line.me/1654945145-hHBq9Hq0?liff_id=1654945145-hHBq9Hq0&code=LFFGAHST" target="_blank" rel="noopener" class="cta-btn cta-btn--line">LINE で無料個別相談を申し込む</a>
+  <a href="#form" class="cta-btn cta-btn--line">無料個別相談を申し込む</a>
  </div>
 
  <section id="flow" class="lp-section lp-section--soft" aria-labelledby="flow-title">
@@ -278,40 +278,61 @@
   </div>
  </section>
 
+ <!-- ===== 無料個別相談フォーム ===== -->
  <section id="form" class="lp-section lp-section--soft" aria-labelledby="form-title">
   <div class="lp-section__inner lp-section__center">
    <h2 id="form-title" class="lp-section__title">まずは、<em>無料個別相談</em>から。</h2>
    <p class="lp-section__lead lp-section__lead--lg">
     「自社の場合、どこから進めるべきか」を個別に説明します。<br>
-    相談だけでも大丈夫です。<br><br>
-    LINEを開いて友だち追加するだけ。<strong>30秒で完了</strong>します。
+    相談だけでも大丈夫です。セールスは一切ありません。
    </p>
-   <div class="cta-area" style="padding-top:8px;">
-    <a href="https://liff.line.me/1654945145-hHBq9Hq0?liff_id=1654945145-hHBq9Hq0&code=LFFGAHST" target="_blank" rel="noopener" class="cta-btn cta-btn--line">LINE で無料個別相談を申し込む</a>
-   </div>
-  </div>
- </section>
 
+   <form class="consult-form" action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX">
+    <input type="hidden" name="subject" value="【無料個別相談】お申し込みがありました - JNHC-MRA">
+    <input type="hidden" name="from_name" value="JNHC-MRA 営業LP">
+    <input type="checkbox" name="botcheck" style="display:none">
 
- <!-- ===== LINE 公式アカウント CTA ===== -->
- <section class="line-section" id="line-cta" aria-labelledby="line-cta-title">
-  <div class="line-section__inner">
-   <div class="line-section__badge" aria-hidden="true">
-    <span>LINE</span>
-   </div>
-   <h2 id="line-cta-title" class="line-section__title">
-    <em>LINE公式アカウント</em>から<br>無料相談を申し込む
-   </h2>
-   <p class="line-section__text">
-    ボタンを押してLINEを開き、友だち追加するだけ。<br>
-    無料相談の予約まで、所要時間はわずか30秒です。
-   </p>
-   <div class="cta-area">
-    <a href="https://liff.line.me/1654945145-hHBq9Hq0?liff_id=1654945145-hHBq9Hq0&code=LFFGAHST" target="_blank" rel="noopener" class="cta-btn cta-btn--line">
-     LINE で無料個別相談を申し込む
-    </a>
-    <p class="line-section__note">※ セールスは一切ありません。相談だけでも歓迎です。</p>
-   </div>
+    <div class="form-group">
+     <label for="f-company">会社名 <span class="req">必須</span></label>
+     <input type="text" id="f-company" name="company" placeholder="開業前の場合は「未定」と入力" required>
+    </div>
+
+    <div class="form-group">
+     <label for="f-name">氏名 <span class="req">必須</span></label>
+     <input type="text" id="f-name" name="name" placeholder="山田 太郎" required>
+    </div>
+
+    <div class="form-group">
+     <label for="f-line">LINE名</label>
+     <input type="text" id="f-line" name="line_name" placeholder="LINEに登録しているお名前">
+    </div>
+
+    <div class="form-group">
+     <label for="f-tel">電話番号 <span class="req">必須</span></label>
+     <input type="tel" id="f-tel" name="phone" placeholder="090-XXXX-XXXX" required>
+    </div>
+
+    <div class="form-group">
+     <label for="f-email">メールアドレス <span class="req">必須</span></label>
+     <input type="email" id="f-email" name="email" placeholder="example@gmail.com" required>
+    </div>
+
+    <div class="form-group">
+     <label for="f-message">相談したい内容や課題</label>
+     <textarea id="f-message" name="message" rows="5" placeholder="現在の営業状況や、相談したい内容・課題を自由にお書きください。"></textarea>
+    </div>
+
+    <div class="form-group">
+     <label>希望面談日程（2〜3個） <span class="req">必須</span></label>
+     <p class="form-hint">※1回の面談は30〜60分程度を予定しています。</p>
+     <input type="text" name="schedule1" placeholder="① 例）6月15日（月）13:00〜14:00" required>
+     <input type="text" name="schedule2" placeholder="②">
+     <input type="text" name="schedule3" placeholder="③">
+    </div>
+
+    <button type="submit" class="cta-btn cta-btn--line form-submit-btn">この内容で無料相談を申し込む　▶</button>
+   </form>
   </div>
  </section>
 

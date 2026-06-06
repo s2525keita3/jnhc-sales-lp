@@ -1403,6 +1403,79 @@ a{ color:var(--brand); text-decoration:none; }
   font-size:clamp(16px,3.4vw,22px);
 }
 
+/* ===== 無料個別相談フォーム ===== */
+.consult-form{
+  margin-top:32px;
+  text-align:left;
+}
+.form-group{
+  margin-bottom:22px;
+}
+.form-group label{
+  display:block;
+  font-weight:700;
+  font-size:14px;
+  color:var(--text-1);
+  margin-bottom:7px;
+  line-height:1.5;
+}
+.req{
+  display:inline-block;
+  background:#DC2626;
+  color:#fff;
+  font-size:11px;
+  font-weight:700;
+  padding:2px 6px;
+  border-radius:3px;
+  margin-left:6px;
+  vertical-align:middle;
+  line-height:1.6;
+}
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="email"],
+.form-group textarea{
+  width:100%;
+  padding:13px 15px;
+  border:2px solid #BFDBFE;
+  border-radius:10px;
+  font-size:16px;
+  font-family:inherit;
+  color:var(--text-1);
+  background:#fff;
+  transition:border-color .2s, box-shadow .2s;
+  -webkit-appearance:none;
+  box-sizing:border-box;
+}
+.form-group input:focus,
+.form-group textarea:focus{
+  outline:none;
+  border-color:var(--brand-2);
+  box-shadow:0 0 0 3px rgba(59,130,246,.15);
+}
+.form-group textarea{
+  resize:vertical;
+  min-height:110px;
+  line-height:1.7;
+}
+.form-hint{
+  font-size:12px;
+  color:var(--text-3);
+  margin:4px 0 10px;
+  line-height:1.6;
+}
+.form-group input + input{
+  margin-top:10px;
+}
+.form-submit-btn{
+  width:100%;
+  margin-top:8px;
+  font-size:clamp(16px,4vw,20px);
+  padding:18px 20px;
+  border:none;
+  cursor:pointer;
+}
+
 /* ===== 課題リスト（大文字強調） ===== */
 .worry-list{
   list-style:none;
