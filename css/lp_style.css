@@ -266,9 +266,12 @@ a{ color:var(--brand); text-decoration:none; }
   padding:0;
 }
 .section-illust img{
-  width:100%;
-  height:auto;
   display:block;
+  max-width:100%;
+  width:auto;
+  height:auto;
+  max-height:700px;   /* 縦長画像が過剰に伸びるのを防ぐ */
+  margin:0 auto;      /* 幅が縮んだときは中央寄せ */
 }
 .section-illust + .section-illust{ margin-top:0; }
 
